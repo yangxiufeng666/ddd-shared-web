@@ -39,9 +39,4 @@ public enum CommonErrorCode implements ErrorCode{
         return message;
     }
 
-    @Override
-    public String getCode() {
-        return this.name();
-    }
-
 }
