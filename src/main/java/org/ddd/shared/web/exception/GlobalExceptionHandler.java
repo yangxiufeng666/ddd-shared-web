@@ -5,6 +5,7 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.util.StringUtils;
+import org.springframework.validation.BindException;
 import org.springframework.validation.FieldError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
@@ -35,6 +36,20 @@ public class GlobalExceptionHandler {
                 }));
 
         log.error("Validation error for [{}]:{}", ex.getParameter().getParameterType().getName(), error);
+        ErrorResponse representation = new ErrorResponse(new RequestValidationException(error), path);
+        return representation;
+    }
+    @ExceptionHandler({BindException.class})
+    @ResponseBody
+    public ErrorResponse handleBindException(BindException ex, HttpServletRequest request) {
+        String path = request.getRequestURI();
+        Map<String, Object> error = ex.getBindingResult().getFieldErrors().stream()
+                .collect(Collectors.toMap(FieldError::getField, fieldError -> {
+                    String message = fieldError.getDefaultMessage();
+                    return StringUtils.isEmpty(message) ? "无错误提示" : message;
+                }));
+
+        log.error("Validation error for [{}]:{}", ex.getBindingResult(), error);
         ErrorResponse representation = new ErrorResponse(new RequestValidationException(error), path);
         return representation;
     }
