@@ -13,6 +13,8 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.validation.ConstraintViolationException;
+import java.sql.SQLIntegrityConstraintViolationException;
 import java.util.Map;
 import java.util.stream.Collectors;
 
@@ -65,6 +67,14 @@ public class GlobalExceptionHandler {
     public ResponseEntity<?> handleGeneralException(Throwable ex, HttpServletRequest request) {
         String path = request.getRequestURI();
         log.error("Error occurred while access[{}]:", path, ex);
+        ErrorResponse representation = new ErrorResponse(new SystemException(ex), path);
+        return new ResponseEntity(representation, new HttpHeaders(), HttpStatus.valueOf(representation.httpStatus()));
+    }
+    @ExceptionHandler(ConstraintViolationException.class)
+    @ResponseBody
+    public ResponseEntity<?> handleViolationException(Throwable ex, HttpServletRequest request) {
+        String path = request.getRequestURI();
+        log.error("ConstraintViolationException Error occurred while access[{}]:", path, ex);
         ErrorResponse representation = new ErrorResponse(new SystemException(ex), path);
         return new ResponseEntity(representation, new HttpHeaders(), HttpStatus.valueOf(representation.httpStatus()));
     }
