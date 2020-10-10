@@ -6,13 +6,13 @@
 
     <groupId>org.ddd.shared</groupId>
     <artifactId>ddd-shared-web</artifactId>
-    <version>1.1-SNAPSHOT</version>
+    <version>1.1.0</version>
     <properties>
         <guava.version>27.1-jre</guava.version>
         <lombok.version>1.18.12</lombok.version>
         <slf4j.version>1.7.30</slf4j.version>
         <spring.version>4.3.25.RELEASE</spring.version>
-        <ddd-shared-core.version>1.0-SNAPSHOT</ddd-shared-core.version>
+        <ddd-shared-core.version>1.0.0</ddd-shared-core.version>
     </properties>
     <dependencies>
         <dependency>
