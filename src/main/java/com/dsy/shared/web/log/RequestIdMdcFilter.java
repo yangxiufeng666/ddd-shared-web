@@ -1,4 +1,4 @@
-package org.ddd.shared.web.log;
+package com.dsy.shared.web.log;
 
 import org.slf4j.MDC;
 import org.springframework.core.annotation.Order;
@@ -11,8 +11,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+import static com.dsy.shared.util.uuid.UuidGeneratorUtil.newUuid;
 import static com.google.common.base.Strings.isNullOrEmpty;
-import static org.ddd.shared.core.utils.UuidGenerator.newUuid;
 import static org.springframework.core.Ordered.HIGHEST_PRECEDENCE;
 
 /**

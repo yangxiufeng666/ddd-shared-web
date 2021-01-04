@@ -1,4 +1,4 @@
-package org.ddd.shared.web.exception;
+package com.dsy.shared.web.exception;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpHeaders;

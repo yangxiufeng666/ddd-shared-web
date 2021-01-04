@@ -1,8 +1,8 @@
-package org.ddd.shared.web.exception;
+package com.dsy.shared.web.exception;
 
 import java.util.Map;
 
-import static org.ddd.shared.web.exception.CommonErrorCode.REQUEST_VALIDATION_FAILED;
+import static com.dsy.shared.web.exception.CommonErrorCode.REQUEST_VALIDATION_FAILED;
 
 /**
  * @author Mr.Yangxiufeng

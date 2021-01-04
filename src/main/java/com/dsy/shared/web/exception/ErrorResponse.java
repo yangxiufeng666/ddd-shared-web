@@ -1,8 +1,8 @@
-package org.ddd.shared.web.exception;
+package com.dsy.shared.web.exception;
 
+import com.dsy.shared.core.Response;
 import com.google.common.collect.Maps;
-import org.ddd.shared.core.Response;
-import org.ddd.shared.web.log.RequestIdMdcFilter;
+import com.dsy.shared.web.log.RequestIdMdcFilter;
 import org.slf4j.MDC;
 
 import java.time.Instant;
