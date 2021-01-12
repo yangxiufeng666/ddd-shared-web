@@ -1,8 +1,8 @@
-package com.dsy.shared.web.exception;
+package com.dsy.sunshine.web.exception;
 
 import java.util.Map;
 
-import static com.dsy.shared.web.exception.CommonErrorCode.REQUEST_VALIDATION_FAILED;
+import static com.dsy.sunshine.web.exception.CommonErrorCode.REQUEST_VALIDATION_FAILED;
 
 /**
  * @author Mr.Yangxiufeng

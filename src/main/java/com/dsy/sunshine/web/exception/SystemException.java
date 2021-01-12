@@ -1,4 +1,4 @@
-package com.dsy.shared.web.exception;
+package com.dsy.sunshine.web.exception;
 
 import com.google.common.collect.Maps;
 

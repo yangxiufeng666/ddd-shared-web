@@ -1,4 +1,4 @@
-package com.dsy.shared.web.exception;
+package com.dsy.sunshine.web.exception;
 
 import org.springframework.util.StringUtils;
 

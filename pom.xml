@@ -4,16 +4,16 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.dsy.shared</groupId>
-    <artifactId>shared-web</artifactId>
-    <version>1.1.1</version>
+    <groupId>com.dsy.sunshine</groupId>
+    <artifactId>sunshine-web</artifactId>
+    <version>1.0.0</version>
     <properties>
         <guava.version>27.1-jre</guava.version>
         <lombok.version>1.18.12</lombok.version>
         <slf4j.version>1.7.30</slf4j.version>
         <spring.version>4.3.25.RELEASE</spring.version>
-        <dsy-shared-core.version>1.1.0</dsy-shared-core.version>
-        <dsy-shared-util.version>1.0.0-SNAPSHOT</dsy-shared-util.version>
+        <sunshine-core.version>1.0.0</sunshine-core.version>
+        <sunshine-util.version>1.0.0-SNAPSHOT</sunshine-util.version>
     </properties>
     <dependencies>
         <dependency>
@@ -43,14 +43,14 @@
             <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>com.dsy.shared</groupId>
-            <artifactId>shared-core</artifactId>
-            <version>${dsy-shared-core.version}</version>
+            <groupId>com.dsy.sunshine</groupId>
+            <artifactId>sunshine-core</artifactId>
+            <version>${sunshine-core.version}</version>
         </dependency>
         <dependency>
-            <groupId>com.dsy.shared</groupId>
-            <artifactId>shared-util</artifactId>
-            <version>${dsy-shared-util.version}</version>
+            <groupId>com.dsy.sunshine</groupId>
+            <artifactId>sunshine-util</artifactId>
+            <version>${sunshine-util.version}</version>
         </dependency>
         <dependency>
             <groupId>javax.servlet</groupId>
