@@ -10,7 +10,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.dsy.sunshine</groupId>
-    <artifactId>sunshine-web</artifactId>
+    <artifactId>sunshine-web-starter</artifactId>
     <version>1.0.1</version>
     <properties>
         <guava.version>27.1-jre</guava.version>
