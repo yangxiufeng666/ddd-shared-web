@@ -14,7 +14,7 @@
     <version>1.0.1</version>
     <properties>
         <guava.version>27.1-jre</guava.version>
-        <fastjson.version>1.2.73</fastjson.version>
+        <fastjson.version>1.2.83</fastjson.version>
         <sunshine-core.version>1.0.0</sunshine-core.version>
         <sunshine-util.version>1.0.0-SNAPSHOT</sunshine-util.version>
     </properties>
